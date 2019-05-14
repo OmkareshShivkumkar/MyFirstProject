@@ -1,0 +1,7 @@
+Just a Query to.........
+
+select count(*) isEarlyTerm from turn_in_configs tic
+            where tic.car_group_config_id = 496
+           and tic.early_turn_in_limit is not null
+           and tic.early_turn_in_limit <> -1
+           and  - tic.early_turn_in_limit >= sysdate;
